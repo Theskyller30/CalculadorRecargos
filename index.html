@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>Calculadora de Recargos Laborales</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Calculadora de Recargos Laborales</h1>
+        </header>
+
+        <section class="calculator-form">
+            <form id="chargeCalculator">
+                <!-- Contenedor Flex para los dos primeros campos -->
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="isSunday">¿Dia es Domingo?</label>
+                        <input type="checkbox" id="isSunday" aria-label="Es Domingo">
+                    </div>
+                    <div class="input-group">
+                        <label for="isHoliday">¿Dia es Festivo?</label>
+                        <input type="checkbox" id="isHoliday" aria-label="Es Festivo">
+                    </div>
+                    <div class="input-group">
+                        <label for="workSchedule1">8:00am a 5:00pm</label>
+                        <input type="checkbox" id="workSchedule1" aria-label="Horario de trabajo 8:00 am a 5:00 pm">
+                    </div>
+                    <div class="input-group">
+                        <label for="workSchedule2">8:00pm a 5:00am</label>
+                        <input type="checkbox" id="workSchedule2" aria-label="Horario de trabajo 8:00 pm a 5:00 am">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="startTime">Hora de inicio (HH:MM):</label>
+                    <input type="time" id="startTime" required aria-label="Hora de inicio">
+                </div>
+                <div class="input-group">
+                    <label for="endTime">Hora de fin (HH:MM):</label>
+                    <input type="time" id="endTime" required aria-label="Hora de fin">
+                    <button type="submit" class="submit-btn">Calcular Recargos</button>
+                </div>
+                <!-- Contenedor de Alerta -->
+                <div id="alertContainer" class="alert-container" style="display: none;">
+                    <p id="alertText"></p>
+                </div>
+
+            </form>
+        </section>
+
+        <section class="results">
+            <h2>Resultados:</h2>
+            <div id="results"></div>
+            <br>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

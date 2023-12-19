@@ -1,0 +1,162 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f4f8;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+
+/* Personalización de los checkboxes */
+
+.input-group input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #4a90e2;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.2s;
+}
+
+.input-group input[type="checkbox"]:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 5px;
+    width: 5px;
+    height: 12px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.input-group input[type="checkbox"]:checked {
+    background-color: #4a90e2;
+}
+
+.input-group input[type="checkbox"]:checked:before {
+    opacity: 1;
+}
+
+.input-group input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    /* Asegúrate de que haya espacio entre los inputs */
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.submit-btn {
+    cursor: pointer;
+    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4a90e2;
+    color: white;
+    margin-top: 20px;
+    /* Espacio antes del botón */
+    margin-left: 120px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #367bc3;
+}
+
+.results {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 4px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.alert-container {
+    background-color: #ffdddd;
+    color: red;
+    padding: 10px;
+    margin: 15px 50px;
+    /* Ajusta el margen según tus necesidades */
+    border: 1px solid red;
+    border-radius: 5px;
+    text-align: center;
+}
+
+
+/* Puedes agregar más estilos aquí si lo deseas */
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+    .submit-btn {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+    .input-group label,
+    .input-group input[type="time"],
+    .submit-btn {
+        font-size: 16px;
+    }
+}
+
+.input-group input[type="time"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
